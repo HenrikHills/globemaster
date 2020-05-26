@@ -49,27 +49,6 @@ let $shortcutDisplayList = document.getElementsByClassName("shortcut");
 let listeningForShortcut = false;
 let listenerTimeout;
 
-function preloadImages(array) {
-    if (!preloadImages.list) {
-        preloadImages.list = [];
-    }
-    var list = preloadImages.list;
-    for (var i = 0; i < array.length; i++) {
-        var img = new Image();
-        img.onload = function() {
-            var index = list.indexOf(this);
-            if (index !== -1) {
-                // remove image from the array once it's loaded
-                // for memory consumption reasons
-                list.splice(index, 1);
-            }
-        }
-        list.push(img);
-        img.src = array[i];
-    }
-}
-
-
 function setupWelcomeMessage(){
     let curHours = new Date().getHours();
     curHours = Math.floor(curHours/6); // Simply dividing current hours by 6 proves to be a good enough aproximation.
@@ -160,8 +139,6 @@ function shortcutListener(e) {
 }
 
 function main(){
-    // setupWelcomeMessage();
-    preloadImages("assets/bg.jpg");
     startTime();
     setupGroups();
     document.addEventListener('keyup', shortcutListener, false);

@@ -29,13 +29,6 @@ body {
   -o-filter: blur(13px);
   -ms-filter: blur(13px);
   filter: blur(13px);
-  background-image: -webkit-linear-gradient(left,
-    rgba(0,0,0,0.3) 0%,
-    rgba(0,0,0,0.3) 20%,
-    rgba(0,0,0,0.3) 80%,
-    rgba(0,0,0,0.3) 100%
-  ),
-  var(--bg-image);
   position: fixed;
   width: 100%;
   height: 100%;

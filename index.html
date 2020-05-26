@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <div class="header-img"><img style="display: none;" src="assets/bg.jpg" alt=""></div>
+    <script language="JavaScript">
+    //refer mistonline.in for more detailed scripts
+    objImage = new Image();
+    function download(){
+    // preload the image file
+    objImage.src="assets/bg.jpg";
+    }
+    function displayimage(){
+    document.images[''im''].src = "assets/bg.jpg";
+    }
+    </script>
     <!--Title of the page-->
     <title>Home</title>
 
@@ -26,22 +36,5 @@
 		<!--Filled dynamically by script.js. Edit `MASTER_MAP` inside the script to change page's contents-->
 	</div>
 	<script type="text/javascript" src="script.js"></script>
-  <script> (() => {
-  'use strict';
-  // Page is loaded
-  const objects = document.getElementsByClassName('asyncImage');  Array.from(objects).map((item) => {
-    // Start loading image
-    const img = new Image();
-    img.src = item.dataset.src;
-    // Once image is loaded replace the src of the HTML element
-    img.onload = () => {
-      item.classList.remove('asyncImage');
-      return item.nodeName === 'IMG' ?
-        item.src = item.dataset.src :
-        item.style.backgroundImage = `url(${item.dataset.src})`;
-    };
-  });
-})();
-</script>
 </body>
 </html>
