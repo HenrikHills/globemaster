@@ -16,28 +16,28 @@ const MASTER_MAP = [
     {
         "groupName": "News",
         "items":[
-            {"name": "NRK", "shortcutKey": "q", "url": "https://www.nrk.no/"},
-            {"name": "Aftenbladet", "shortcutKey": "w", "url": "http://www.aftenbladet.no/"},
+            {"name": "NRK", "shortcutKey": "n", "url": "https://www.nrk.no/"},
+            {"name": "Aftenbladet", "shortcutKey": "a", "url": "http://www.aftenbladet.no/"},
             {"name": "E24", "shortcutKey": "e", "url": "https://e24.no/"},
-            {"name": "DN", "shortcutKey": "e", "url": "https://www.dn.no/"}
+            {"name": "DN", "shortcutKey": "d", "url": "https://www.dn.no/"}
         ]
     },
     {
         "groupName": "Tech",
         "items":[
-            {"name": "The Verge", "shortcutKey": "a", "url": "http://www.theverge.com/"},
-            {"name": "9to5Mac", "shortcutKey": "s", "url": "http://9to5mac.com/"},
-            {"name": "MacRumors", "shortcutKey": "d", "url": "http://www.macrumors.com/"},
-            {"name": "Tek.no", "shortcutKey": "d", "url": "https://www.tek.no/"}
+            {"name": "The Verge", "shortcutKey": "v", "url": "http://www.theverge.com/"},
+            {"name": "9to5Mac", "shortcutKey": "9", "url": "http://9to5mac.com/"},
+            {"name": "MacRumors", "shortcutKey": "m", "url": "http://www.macrumors.com/"},
+            {"name": "Tek.no", "shortcutKey": "k", "url": "https://www.tek.no/"}
         ]
     },
     {
         "groupName": "Other",
         "items":[
-            {"name": "Twitter", "shortcutKey": "z", "url": "https://twitter.com/"},
-            {"name": "Reddit", "shortcutKey": "x", "url": "https://www.reddit.com/"},
-            {"name": "Flyprat", "shortcutKey": "c", "url": "http://forum.flyprat.no/search.php?do=getnew"},
-            {"name": "FR24", "shortcutKey": "d", "url": "https://www.flightradar24.com/59.38,6.83/7"}
+            {"name": "Twitter", "shortcutKey": "t", "url": "https://twitter.com/"},
+            {"name": "Reddit", "shortcutKey": "r", "url": "https://www.reddit.com/"},
+            {"name": "Flyprat", "shortcutKey": "f", "url": "http://forum.flyprat.no/search.php?do=getnew"},
+            {"name": "FR24", "shortcutKey": "2", "url": "https://www.flightradar24.com/59.38,6.83/7"}
         ]
     }
 ]

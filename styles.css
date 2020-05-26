@@ -2,7 +2,7 @@
 /** { border: 1px solid red; }*/
 
 :root {
-    --bg-color: #223030;
+    --bg-color: #191919;
     --text-color: #dddddd;
     --bg-image: url("assets/bg.jpg");
     --SHORTCUT_TIMEOUT: 1.5s;
@@ -29,8 +29,8 @@ body {
 }
 #logo h1 {
     font-weight: 200;
-    font-size: 4rem;
-    margin-bottom: 0;
+    font-size: 6rem;
+    margin-bottom: 15px;
 }
 #logo h2 {
     font-weight: 200;
@@ -64,7 +64,7 @@ body {
     font-weight: 400;
     font-size: 2rem;
     margin-bottom: 0;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
 }
 .group p {
     margin-bottom: 0;
