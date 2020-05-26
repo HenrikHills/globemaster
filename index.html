@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <div class="header-img"><img style="display: none;"
-      src="assets/bg.jpg" alt=""></div>
+    <div class="page-bg">
+    <div class="hidden">
+  	<script type="text/javascript">
+  		<!--//--><![CDATA[//><!--
+  			var images = new Array()
+  			function preload() {
+  				for (i = 0; i < preload.arguments.length; i++) {
+  					images[i] = new Image()
+  					images[i].src = preload.arguments[i]
+  				}
+  			}
+  			preload(
+  				"assets/bg.jpg"
+  			)
+  		//--><!]]>
+  	</script>
+  </div></div>
     <!--Title of the page-->
     <title>Home</title>
 
@@ -16,9 +31,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-bg">
-    <script> imageCache.push("assets/bg.jpg"); </script>;
-  </div>
+
 	<div id="logo">
 		<!-- <h1 id="welcome-string"></h1> -->
     <h1 id="time"></h1>
