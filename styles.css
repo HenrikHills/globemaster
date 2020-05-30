@@ -48,15 +48,24 @@ body {
 }
 
 #logo {
-  padding-top: 25vh;
+  padding-top: 33vh;
   text-align: center;
 }
-#logo h1 {
+
+#logo h1, .wrap {
   font-weight: 200;
-  font-size: 6rem;
   margin-bottom: 15px;
   font-weight: normal;
 }
+
+#logo .hello {
+  font-size: 6rem;
+}
+
+#logo .wrap {
+  font-size: 4rem;
+}
+
 #logo h2 {
   font-weight: 200;
   font-size: 2rem;
@@ -195,6 +204,11 @@ a {
 
 .fadeOutHide {
   opacity: 0;
+  transition: opacity 400ms;
+}
+
+.fadeIn {
+  opacity: 1;
   transition: opacity 400ms;
 }
 

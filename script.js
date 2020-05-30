@@ -90,16 +90,12 @@ function formatTime() {
 }
 
 function startTime() {
-  document.getElementById("time").innerHTML = formatTime();
+  const el = document.getElementById("hello");
+  el.innerHTML = formatTime();
+  el.style.fontSize = "4rem";
   t = setTimeout(function () {
     startTime();
   }, 500);
-}
-
-function showTime() {
-  const el = document.getElementById("time");
-  el.classList.add("fadeInShow");
-  el.classList.remove("fadeInHide");
 }
 
 function setupGroups() {
@@ -182,7 +178,7 @@ class TxtRotate {
     }
     this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
     var that = this;
-    var delta = 150 - Math.random() * 100;
+    var delta = 200 - Math.random() * 100;
     if (this.isDeleting) {
       delta /= 2;
     }
@@ -195,9 +191,8 @@ class TxtRotate {
       delta = 500;
     }
     if (i === 0 && this.txt === "") {
-      this.el.classList.remove("fadeOutShow");
-      this.el.classList.add("fadeOutHide");
-      showTime();
+      startTime();
+      return;
     }
     setTimeout(function () {
       that.tick();
@@ -224,7 +219,6 @@ window.onload = function () {
 };
 
 function main() {
-  startTime();
   setupGroups();
   document.addEventListener("keyup", shortcutListener, false);
 }
