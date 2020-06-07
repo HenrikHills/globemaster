@@ -1,7 +1,6 @@
 :root {
   --bg-color: #191919;
   --text-color: #dddddd;
-  --bg-image: url("assets/bg.jpg");
   --SHORTCUT_TIMEOUT: 1.5s;
 }
 
@@ -15,7 +14,6 @@ body {
   font-size: 22px;
 
   user-select: none;
-  animation: fadein 1s;
 }
 
 #time {
@@ -23,20 +21,19 @@ body {
   font-weight: normal;
 }
 
-.page-bg {
-  background-image: var(--bg-image);
+#page-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: blur(13px);
   -moz-filter: blur(13px);
   -o-filter: blur(13px);
   -ms-filter: blur(13px);
   filter: blur(13px);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  animation: fadein linear 2s;
 }
 
 #centered {
