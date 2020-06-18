@@ -41,8 +41,10 @@ function formatTime() {
   var today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
+  var s = today.getSeconds();
   m = formatPrintedTime(m);
-  return `${h}:${m}`;
+  s = formatPrintedTime(s);
+  return `${h}:${m}:${s}`;
 }
 
 function showTime() {
@@ -50,7 +52,7 @@ function showTime() {
   el.innerHTML = formatTime();
   t = setTimeout(function () {
     showTime();
-  }, 500);
+  }, 10);
 }
 
 function setupGroups() {
