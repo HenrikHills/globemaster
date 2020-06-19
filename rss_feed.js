@@ -9,10 +9,9 @@ $.ajax(RSS_URL, {
 
   success: function (data) {
     $(data)
-      .find("item")
+      .find("item:lt(3)")
       .each(function () {
         const el = $(this);
-
         const template = `
             <article>
               <h2>
@@ -27,7 +26,6 @@ $.ajax(RSS_URL, {
               </p>
             </article>
           `;
-
         document.body.insertAdjacentHTML("beforeend", template);
       });
   },
