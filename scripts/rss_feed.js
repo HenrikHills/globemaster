@@ -8,6 +8,7 @@ $.ajax(RSS_URL, {
   },
 
   dataType: "xml",
+  crossDomain: true,
 
   success: function (data) {
     $(data)
