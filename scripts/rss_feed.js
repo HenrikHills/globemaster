@@ -2,7 +2,11 @@ function getRSS() {
   let $rss_container = document.getElementById("rss");
   var rss_xml = "";
   var request = new XMLHttpRequest();
-  request.open("GET", "https://feed.nrk.no/pan/rss/1.11001867", true);
+  request.open(
+    "GET",
+    "https://cors-anywhere.herokuapp.com/https://feed.nrk.no/pan/rss/1.11001867",
+    true
+  );
   request.onreadystatechange = function () {
     if (request.readyState == 4) {
       if (request.status == 200 || request.status == 0) {
