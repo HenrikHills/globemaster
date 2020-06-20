@@ -17,16 +17,17 @@ function getRSS() {
             $rss_container.appendChild(rss_item);
 
             let title = document.createElement("h2");
-            title.innerHTML = `<a href="${el
-              .find("link")
-              .text()}" target="_blank" rel="noopener">
-              ${el.find("title").text()}
-            </a>`;
+            title.innerHTML = `${el.find("title").text()}`;
+            title.className = "clicker";
+            title.tabIndex = "1";
             rss_item.appendChild(title);
 
             let description = document.createElement("p");
-            description.className = "description_item";
-            description.innerHTML = `${el.find("description").text()}`;
+            description.className = "description_item hidden_div";
+            description.innerHTML = `
+            <a href="${el.find("link").text()}" target="_blank" rel="noopener">
+              ${el.find("description").text()}
+            </a>`;
             rss_item.appendChild(description);
           });
       }

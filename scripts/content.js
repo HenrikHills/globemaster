@@ -46,6 +46,7 @@ function setupGroups() {
       let curItemData = curGroupData.items[j];
 
       let pContainer = document.createElement("p");
+      pContainer.className = "content_font";
       group.appendChild(pContainer);
 
       let link = document.createElement("a");

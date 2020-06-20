@@ -1,17 +1,16 @@
 #rss {
-    height: 15%;
     padding-top: 12%;
 }
 
 
 .rss_item {
-    overflow: auto;
-    overflow-y: scroll;
     display: inline-block;
     vertical-align: top;
     text-align: left;
     width: 15%;
     padding: 1% 3%;
+
+    
   
     -webkit-filter: blur(0px);
     -moz-filter: blur(0px);
@@ -20,18 +19,46 @@
     filter: blur(0px);
 }
   
-.rss_item a, .rss_item h2 {
+.rss_item h2 {
     font-weight: 400;
     font-size: 1.5vh;
     text-align: center;
 }
 
-.rss_item p {
-    font-weight: 400;
-    font-size: small;
+.description_item a {
+    font-weight: 300;
+    font-size: 1.3vh;
+    color: white;
+    padding: 0.3rem 0;
+    text-decoration: none;
+    padding-left: 0;
 }
 
-.description_item {
+
+.clicker {
+    outline: none;
+    cursor: pointer;
+}
+    
+.hidden_div {
     display: none;
 }
 
+.clicker:focus {
+    text-align: left;
+}
+    
+.clicker:focus + .hidden_div {
+    padding-bottom: 5vh;
+    text-align: left;
+    display:block;
+    transform:translateY(-100%);
+    /*Firefox*/
+    -moz-transform:translateY(-100%);
+    /*Microsoft Internet Explorer*/
+    -ms-transform:translateY(-100%);
+    /*Chrome, Safari*/
+    -webkit-transform:translateY(-100%);
+    /*Opera*/
+    -o-transform:translateY(-100%);
+}
