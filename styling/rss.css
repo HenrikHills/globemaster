@@ -1,5 +1,6 @@
-.rss {
-    height: 30px;
+#rss {
+    height: 15%;
+    padding-top: 12%;
 }
 
 
@@ -19,12 +20,18 @@
     filter: blur(0px);
 }
   
-.rss_item a {
+.rss_item a, .rss_item h2 {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5vh;
+    text-align: center;
 }
 
 .rss_item p {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: small;
 }
+
+.description_item {
+    display: none;
+}
+
