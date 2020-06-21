@@ -22,12 +22,12 @@ function getRSS() {
 
             let title = document.createElement("div");
             title.innerHTML = `${el.find("title").text()}`;
-            title.className = "title clicker";
+            title.className = "title";
             title.tabIndex = "1";
             rss_item.appendChild(title);
 
             let description = document.createElement("div");
-            description.className = "description_item hidden_div";
+            description.className = "description_item";
             description.innerHTML = `
             <a href="${el.find("link").text()}" target="_blank" rel="noopener">
               ${el.find("description").text()}

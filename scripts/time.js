@@ -10,6 +10,7 @@ function formatTime() {
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
+  h = formatPrintedTime(h);
   m = formatPrintedTime(m);
   s = formatPrintedTime(s);
   return `${h}:${m}:${s}`;
