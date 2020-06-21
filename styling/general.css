@@ -15,7 +15,7 @@ body {
 
   user-select: none;
   max-height: 100%;
-
+  max-width: 100%;
 }
 
 #time {
@@ -38,10 +38,8 @@ body {
   -o-filter: blur(13px);
   -ms-filter: blur(13px);
   filter: blur(13px);
-  /*
   animation: fadein linear 2s;
   animation-delay: 500ms;
-  */
 }
 
 .centered {

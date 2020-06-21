@@ -1,38 +1,75 @@
 #rss {
-    padding-top: 12%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    /*border: 1px solid blue;*/
 }
 
+.description_item {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+
+    vertical-align: bottom;
+    border: 1px solid red;
+}
 
 .rss_item {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
+    max-height: 100%;
     width: 15%;
-    padding: 1% 3%;
-
-    
-  
+    padding: 0% 3%;
     -webkit-filter: blur(0px);
     -moz-filter: blur(0px);
     -o-filter: blur(0px);
     -ms-filter: blur(0px);
     filter: blur(0px);
+    /*border: 1px solid green;*/
+    
+}
+
+.rss_item .title {
+    font-size: medium;
+    display: flex;
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.6;
 }
   
 .rss_item h2 {
-    font-weight: 400;
-    font-size: 1.5vh;
-    text-align: center;
+    font-size: medium;
+    /*border: 1px solid orange;*/
 }
 
 .description_item a {
     font-weight: 300;
     font-size: 1.3vh;
     color: white;
-    padding: 0.3rem 0;
     text-decoration: none;
-    padding-left: 0;
 }
+
+
+
+.credits {
+    position: absolute;
+    left: 0;
+    padding: 0% 3%;
+    display: flex;
+    align-items: center;
+    opacity: 0.3;
+    /*border: 1px solid yellow;*/
+  }
+  
+  .credits a, .credits p {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: medium;
+  
+  }
 
 
 .clicker {
@@ -49,16 +86,6 @@
 }
     
 .clicker:focus + .hidden_div {
-    padding-bottom: 5vh;
     text-align: left;
-    display:block;
-    transform:translateY(-100%);
-    /*Firefox*/
-    -moz-transform:translateY(-100%);
-    /*Microsoft Internet Explorer*/
-    -ms-transform:translateY(-100%);
-    /*Chrome, Safari*/
-    -webkit-transform:translateY(-100%);
-    /*Opera*/
-    -o-transform:translateY(-100%);
+    display: inline-block;
 }

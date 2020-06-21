@@ -20,13 +20,13 @@ function getRSS() {
             rss_item.className = "rss_item";
             $rss_container.appendChild(rss_item);
 
-            let title = document.createElement("h2");
+            let title = document.createElement("div");
             title.innerHTML = `${el.find("title").text()}`;
-            title.className = "clicker";
+            title.className = "title clicker";
             title.tabIndex = "1";
             rss_item.appendChild(title);
 
-            let description = document.createElement("p");
+            let description = document.createElement("div");
             description.className = "description_item hidden_div";
             description.innerHTML = `
             <a href="${el.find("link").text()}" target="_blank" rel="noopener">
@@ -38,6 +38,16 @@ function getRSS() {
     }
   };
   request.send();
+  console.log("RSS Complete.");
+
+  let nrk_credits = document.createElement("div");
+  nrk_credits.className = "credits";
+  nrk_credits.innerHTML = `<p>RSS from 
+  <a href="https://feed.nrk.no/pan/rss/1.11001867">NRK</a>
+  :</p>`;
+  $rss_container.appendChild(nrk_credits);
+
+  console.log("Credits Complete.");
 }
 
 getRSS();
