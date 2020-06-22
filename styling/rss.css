@@ -6,6 +6,8 @@
     justify-content: center;
     align-items: center;
     height: 7vh;
+    animation: fadein linear 2s;
+    animation-delay: 500ms;
     /*border: 1px solid blue;*/
 }
 
@@ -33,24 +35,32 @@
     width: 100%;
 }
 
+.rss_item::before {
+    width: 100%;
+    transition: 1250ms;
+
+}
+
+.rss_item:hover {
+    opacity: 1;
+    transition: 250ms;
+}
+
+.rss_item:hover > .title {
+    opacity: 0.4;
+    transition: 250ms;
+}
 
 .rss_item:hover > .title {
     width: 0;
-    opacity: 0.8;
-    transition: 1250ms;
+    transition: 250ms;
 }
 
 .rss_item:hover > .title + .description_item {
     display: block;
     position: absolute;
     bottom: 100%;
-    animation: fadein 1250ms;
-}
-
-.title:active + .description_item {
-    display: block;
-    position: absolute;
-    bottom: 100%;
+    animation: fadein 250ms;
 }
 
 
@@ -70,7 +80,7 @@
 
 .description_item a {
     font-weight: 300;
-    font-size: 1.3vh;
+    font-size: 14px;
     color: white;
     text-decoration: none;
     word-wrap: break-word;

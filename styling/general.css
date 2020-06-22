@@ -11,6 +11,7 @@ body {
   color: var(--text-color);
 
   font-family: "SF Compact Display Light", sans-serif;
+
   font-size: 22px;
 
   user-select: none;
@@ -19,11 +20,14 @@ body {
 }
 
 #time {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: normal;
-  text-align: left;
-  width: 31vh;;
+  text-align: center;
+  display: inline-block;
   margin: auto;
+  font-family:monospace, monospace;
+  font-family: 'Iosevka', monospace;
+  /*border: 2px solid rebeccapurple;*/
 }
 
 #page-bg {
@@ -63,4 +67,10 @@ body {
   font-size: 2rem;
   margin-top: 0;
   opacity: 0.5;
+}
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('https://cdn.rawgit.com/kaushalmodi/iosevka-mirror/master/woff2/iosevka-ss08-regular.woff2') format('woff2'),
+       url('https://cdn.rawgit.com/kaushalmodi/iosevka-mirror/master/woff/iosevka-ss08-regular.woff') format('woff');
 }

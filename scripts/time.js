@@ -21,7 +21,7 @@ function showTime() {
   el.innerHTML = formatTime();
   t = setTimeout(function () {
     showTime();
-  }, 10);
+  }, 1000);
 }
 
 showTime();
