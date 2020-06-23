@@ -24,6 +24,7 @@ function getRSS() {
             title.innerHTML = `${el.find("title").text()}`;
             title.className = "title";
             title.tabIndex = "1";
+            title.style = "animation: fadein linear 2s";
             rss_item.appendChild(title);
 
             let description = document.createElement("div");
@@ -42,9 +43,10 @@ function getRSS() {
 
   let nrk_credits = document.createElement("div");
   nrk_credits.className = "credits";
-  nrk_credits.innerHTML = `<p>RSS from 
+  nrk_credits.innerHTML = `<p>News from 
   <a href="https://feed.nrk.no/pan/rss/1.11001867">NRK</a>
   :</p>`;
+  nrk_credits.style = "transition: 500ms; opacity: 0.3;";
   $rss_container.appendChild(nrk_credits);
 
   console.log("Credits Complete.");
