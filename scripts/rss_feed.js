@@ -1,5 +1,14 @@
 function getRSS() {
   let $rss_container = document.getElementById("rss");
+
+  let nrk_credits = document.createElement("div");
+  nrk_credits.className = "credits";
+  nrk_credits.innerHTML = `<p>News from 
+  <a href="https://feed.nrk.no/pan/rss/1.11001867">NRK</a>
+  :</p>`;
+  nrk_credits.style = "visibility: hidden; opacity: 0;";
+  $rss_container.appendChild(nrk_credits);
+
   var rss_xml = "";
   var request = new XMLHttpRequest();
   request.open(
@@ -24,7 +33,7 @@ function getRSS() {
             title.innerHTML = `${el.find("title").text()}`;
             title.className = "title";
             title.tabIndex = "1";
-            title.style = "animation: fadein linear 2s";
+            title.style = "transition: 500ms; opacity: 0.6;";
             rss_item.appendChild(title);
 
             let description = document.createElement("div");
@@ -35,19 +44,13 @@ function getRSS() {
             </a>`;
             rss_item.appendChild(description);
           });
+        nrk_credits.style =
+          "transition: 1000ms; opacity: 0.3; visibility: visible;";
       }
     }
   };
   request.send();
   console.log("RSS Complete.");
-
-  let nrk_credits = document.createElement("div");
-  nrk_credits.className = "credits";
-  nrk_credits.innerHTML = `<p>News from 
-  <a href="https://feed.nrk.no/pan/rss/1.11001867">NRK</a>
-  :</p>`;
-  nrk_credits.style = "transition: 500ms; opacity: 0.3;";
-  $rss_container.appendChild(nrk_credits);
 
   console.log("Credits Complete.");
 }
