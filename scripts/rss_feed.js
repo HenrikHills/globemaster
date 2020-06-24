@@ -44,15 +44,12 @@ function getRSS() {
             </a>`;
             rss_item.appendChild(description);
           });
-        nrk_credits.style =
-          "transition: 1000ms; opacity: 0.3; visibility: visible;";
+        nrk_credits.style = "opacity: 0.3; visibility: visible;";
+        $rss_container.style = "animation: fadein linear 1250ms;";
       }
     }
   };
   request.send();
-  console.log("RSS Complete.");
-
-  console.log("Credits Complete.");
 }
 
 getRSS();
